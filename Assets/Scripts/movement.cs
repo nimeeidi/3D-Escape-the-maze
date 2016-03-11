@@ -23,7 +23,7 @@ public class movement : MonoBehaviour {
 		float rotation = Input.GetAxis ("Horizontal") * rotationRate;
 		snowman.Rotate (0, rotation, 0);
 		float translate = Input.GetAxis ("Vertical") * speed;
-		snowman.Translate (translate, 0 ,0);
+		snowman.Translate (0, 0 ,translate);
 	
 }
 }
