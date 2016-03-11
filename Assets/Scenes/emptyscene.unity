@@ -234,6 +234,7 @@ GameObject:
   - 23: {fileID: 1036855430}
   - 114: {fileID: 1036855434}
   - 143: {fileID: 1036855435}
+  - 114: {fileID: 1036855436}
   m_Layer: 0
   m_Name: snowman
   m_TagString: Untagged
@@ -311,7 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05891f2e04cb748208c4a00c237ea481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Snowman: {fileID: 1036855429}
+  snowman: {fileID: 0}
 --- !u!143 &1036855435
 CharacterController:
   m_ObjectHideFlags: 0
@@ -329,6 +330,18 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1036855436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1036855429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a90765a0cc45419cbf1d1c45e2d8da2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snowman: {fileID: 1036855433}
 --- !u!1 &1168391447
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,7 +423,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1168391447}
   m_LocalRotation: {x: 0.14579056, y: 0, z: 0, w: 0.9893155}
-  m_LocalPosition: {x: 0, y: 4.13, z: -9.73}
+  m_LocalPosition: {x: 0, y: 7.2, z: -19.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
