@@ -4,6 +4,7 @@ using System.Collections;
 public class movement : MonoBehaviour {
 	public Transform snowman;
 	private float rotationRate = 3f;
+	private float speed = 3f;
 
 
 
@@ -21,9 +22,8 @@ public class movement : MonoBehaviour {
 	void Update () {
 		float rotation = Input.GetAxis ("Horizontal") * rotationRate;
 		snowman.Rotate (0, rotation, 0);
-//		if (Input.GetKeyDown(KeyCode.RightArrow)){
-//			
-//			snowman.rotation = Quaternion ();
-//				}
-	}
+		float translate = Input.GetAxis ("Vertical") * speed;
+		snowman.Translate (translate, 0 ,0);
+	
+}
 }
