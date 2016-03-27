@@ -3,8 +3,8 @@ using System.Collections;
 
 public class movement : MonoBehaviour {
 	public Transform snowman;
-	private float rotationRate = 3f;
-	private float speed = 3f;
+	private float rotationRate = 2f;
+	private float speed = 2f;
 
 
 
