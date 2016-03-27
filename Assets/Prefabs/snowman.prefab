@@ -18,6 +18,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &154978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 479816}
+  - 20: {fileID: 2059574}
+  - 92: {fileID: 9278368}
+  - 124: {fileID: 12470802}
+  - 81: {fileID: 8129700}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &155962
 GameObject:
   m_ObjectHideFlags: 0
@@ -29,9 +48,8 @@ GameObject:
   - 33: {fileID: 3395962}
   - 135: {fileID: 13527406}
   - 23: {fileID: 2312946}
-  - 114: {fileID: 11450116}
-  - 143: {fileID: 14348986}
-  - 114: {fileID: 11403830}
+  - 54: {fileID: 5421836}
+  - 114: {fileID: 11444636}
   m_Layer: 0
   m_Name: snowman
   m_TagString: Untagged
@@ -69,6 +87,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 493218}
   m_RootOrder: 0
+--- !u!4 &479816
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154978}
+  m_LocalRotation: {x: 0.1567739, y: 0, z: 0, w: 0.98763454}
+  m_LocalPosition: {x: -0.3, y: 1.2, z: -2.4}
+  m_LocalScale: {x: 0.1, y: 0.099999994, z: 0.099999994}
+  m_Children: []
+  m_Father: {fileID: 493218}
+  m_RootOrder: 2
 --- !u!4 &493218
 Transform:
   m_ObjectHideFlags: 1
@@ -76,11 +106,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12, y: 4.56, z: 0}
+  m_LocalPosition: {x: 200, y: 4.56, z: -173}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 466140}
   - {fileID: 493714}
+  - {fileID: 479816}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &493714
@@ -95,6 +126,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 493218}
   m_RootOrder: 1
+--- !u!20 &2059574
+Camera:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154978}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
 --- !u!23 &2312946
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -194,7 +259,36 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155962}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &11403830
+--- !u!54 &5421836
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155962}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!81 &8129700
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154978}
+  m_Enabled: 1
+--- !u!92 &9278368
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154978}
+  m_Enabled: 1
+--- !u!114 &11444636
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -202,22 +296,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 155962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a90765a0cc45419cbf1d1c45e2d8da2, type: 3}
+  m_Script: {fileID: 11500000, guid: fde1202bdc618a14f93ae7a1e80b2949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snowman: {fileID: 493218}
---- !u!114 &11450116
-MonoBehaviour:
+  rotateRate: 90
+  walkRate: 35
+--- !u!124 &12470802
+Behaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 155962}
+  m_GameObject: {fileID: 154978}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05891f2e04cb748208c4a00c237ea481, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snowman: {fileID: 0}
 --- !u!135 &13527406
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -254,23 +344,6 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!143 &14348986
-CharacterController:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 155962}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
