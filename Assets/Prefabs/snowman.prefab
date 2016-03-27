@@ -48,8 +48,8 @@ GameObject:
   - 33: {fileID: 3395962}
   - 135: {fileID: 13527406}
   - 23: {fileID: 2312946}
-  - 143: {fileID: 14348986}
-  - 114: {fileID: 11403830}
+  - 54: {fileID: 5421836}
+  - 114: {fileID: 11444636}
   m_Layer: 0
   m_Name: snowman
   m_TagString: Untagged
@@ -259,6 +259,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155962}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &5421836
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155962}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!81 &8129700
 AudioListener:
   m_ObjectHideFlags: 1
@@ -273,7 +288,7 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154978}
   m_Enabled: 1
---- !u!114 &11403830
+--- !u!114 &11444636
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -281,10 +296,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 155962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a90765a0cc45419cbf1d1c45e2d8da2, type: 3}
+  m_Script: {fileID: 11500000, guid: fde1202bdc618a14f93ae7a1e80b2949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snowman: {fileID: 493218}
+  rotateRate: 90
+  walkRate: 35
 --- !u!124 &12470802
 Behaviour:
   m_ObjectHideFlags: 1
@@ -328,23 +344,6 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!143 &14348986
-CharacterController:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 155962}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Height: 1
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
