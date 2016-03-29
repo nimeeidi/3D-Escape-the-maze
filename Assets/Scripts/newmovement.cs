@@ -45,6 +45,7 @@ public class newmovement : MonoBehaviour {
     {
         Vector3 move = transform.forward * walkInput * walkRate;
         snowman.MovePosition(move+snowman.position);
+
         //transform.forward = moving on the snowman's forward axis
         //walkInput is pos/neg which determines forward/backward movement
         // walkRate multiplies the rate at which u want to go 
