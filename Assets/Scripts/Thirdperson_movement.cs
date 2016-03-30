@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class newmovement : MonoBehaviour {
+public class Thirdperson_movement : MonoBehaviour {
+
+
     private Rigidbody snowman;
     private float rotateRate = 90f;
     private float walkRate = 3f;
@@ -15,25 +17,27 @@ public class newmovement : MonoBehaviour {
         snowman = GetComponent<Rigidbody>();
     }
 
-	void Start () {
+    void Start()
+    {
         snowman = GetComponent<Rigidbody>();
         holdsNextRotation = transform.rotation; //gets current spawn coordinates
         walkInput = 0;
         turnInput = 0; //setting all the current inputs to 0
-     
-	}
+
+    }
 
     private void GetInput()
     {
         walkInput = Input.GetAxis("Vertical"); //getAxis returns -1 to 1 
-        turnInput = Input.GetAxis("Horizontal"); 
+        turnInput = Input.GetAxis("Horizontal");
 
     }
-	
-	private void Update () {
+
+    private void Update()
+    {
         GetInput(); //gathers your input in update
         Turn(); //turning does not require physics
-        
+
     }
 
     private void FixedUpdate()
@@ -44,7 +48,7 @@ public class newmovement : MonoBehaviour {
     private void Walk()
     {
         Vector3 move = transform.forward * walkInput * walkRate;
-        snowman.MovePosition(move+snowman.position);
+        snowman.MovePosition(move + snowman.position);
 
         //transform.forward = moving on the snowman's forward axis
         //walkInput is pos/neg which determines forward/backward movement
@@ -54,7 +58,7 @@ public class newmovement : MonoBehaviour {
     private void Turn()
     {
         //Angle Axis takes angle from 0-360 that you want to turn and axis
-        holdsNextRotation *= Quaternion.AngleAxis(rotateRate*turnInput*Time.deltaTime,Vector3.up); //vector3.up is global yaxis
+        holdsNextRotation *= Quaternion.AngleAxis(rotateRate * turnInput * Time.deltaTime, Vector3.up); //vector3.up is global yaxis
         // multiplying Quarternion bc its like ur adding angles
         transform.rotation = holdsNextRotation;
 

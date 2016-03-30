@@ -49,7 +49,7 @@ GameObject:
   - 135: {fileID: 13527406}
   - 23: {fileID: 2312946}
   - 54: {fileID: 5421836}
-  - 114: {fileID: 11444636}
+  - 114: {fileID: 11422842}
   m_Layer: 0
   m_Name: snowman
   m_TagString: Untagged
@@ -267,12 +267,12 @@ Rigidbody:
   m_GameObject: {fileID: 155962}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 1000000
+  m_AngularDrag: 1000000
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!81 &8129700
 AudioListener:
@@ -288,7 +288,7 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154978}
   m_Enabled: 1
---- !u!114 &11444636
+--- !u!114 &11422842
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -296,11 +296,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 155962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fde1202bdc618a14f93ae7a1e80b2949, type: 3}
+  m_Script: {fileID: 11500000, guid: eed4a6612f74e2742ad633cf2032214d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateRate: 90
-  walkRate: 35
 --- !u!124 &12470802
 Behaviour:
   m_ObjectHideFlags: 1
