@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class grow : MonoBehaviour {
-	public Transform Snowman;
+	public Transform snowman;
 
 	void Awake(){
-		Snowman = GetComponent<Transform> ();
+		snowman = GetComponent<Transform> ();
 	}
 
 	// Use this for initialization
@@ -16,7 +16,7 @@ public class grow : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.Space))
-			Snowman.transform.localScale += new Vector3 (2f,2f,2f);
+			snowman.transform.localScale += new Vector3 (2f,2f,2f);
 
 	}
 }
